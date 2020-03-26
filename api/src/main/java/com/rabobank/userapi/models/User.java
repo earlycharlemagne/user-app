@@ -1,12 +1,28 @@
 package com.rabobank.userapi.models;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Map;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 
     private String firstname;
     private String surname;
     private String gender;
     private String dateOfBirth;
-    private String picture;
+    private Picture picture;
+
+    @JsonCreator
+    public User(@JsonProperty("name") Map<String, String> name,
+                @JsonProperty("dob") Map<String, String> dob) {
+
+        this.firstname = name.get("first");
+        this.surname = name.get("last");
+        this.dateOfBirth = dob.get("date");
+    }
 
     public String getFirstname() {
         return firstname;
@@ -40,11 +56,11 @@ public class User {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getPicture() {
+    public Picture getPicture() {
         return picture;
     }
 
-    public void setPicture(String picture) {
+    public void setPicture(Picture picture) {
         this.picture = picture;
     }
 }

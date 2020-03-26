@@ -17,6 +17,6 @@ public class UserService {
     public User getUserByName(String firstname, String surname) {
         String url = ENDPOINT + "?firstname=" + firstname + "&lastname=" + surname;
 
-        return restTemplate.getForObject(ENDPOINT, User.class);
+        return restTemplate.getForObject(url, User.class);
     }
 }
