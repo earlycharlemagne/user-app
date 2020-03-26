@@ -11,7 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("http://localhost:8000")
 public class UserController {
 
     private UserService userService;

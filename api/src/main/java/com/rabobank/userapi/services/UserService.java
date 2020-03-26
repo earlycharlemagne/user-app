@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class UserService {
 
-    private final static String ENDPOINT = "http://localhost:5000/users";
+    private final static String ENDPOINT = "http://userapp_stubs:8080/users";
     private RestTemplate restTemplate;
 
     public UserService() {

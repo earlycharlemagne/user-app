@@ -34,7 +34,7 @@ export class AppComponent {
     this.isRetrievingUser = true;
 
     this.http.get<User>(
-      'http://localhost:8080/api/v1/users',
+      `${environment.userApiUrl}/api/v1/users`,
       {
         headers: new HttpHeaders({
           'Authorization': `Basic ${environment.authenticationKey}`

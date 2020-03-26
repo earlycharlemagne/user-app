@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: userapp_frontend
+    env_file:
+      - frontend/.env
+    ports:
+      - "8000:80"
+    restart: always
+
+  db:
+    build:
+      context: ./stubs
+      dockerfile: Dockerfile
+    container_name: userapp_stubs
+    ports:
+      - "5000:8080"
+    restart: always
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: userapp_api
+    env_file:
+      - api/.env
+    ports:
+      - "8888:8080"
+    restart: always

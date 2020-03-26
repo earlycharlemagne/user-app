@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  authenticationKey: 'dGVzdHVzZXI6dGVzdHBhc3N3b3Jk'
+  authenticationKey: 'dGVzdHVzZXI6dGVzdHBhc3N3b3Jk',
+  userApiUrl: 'http://localhost:8888'
 };
 
 /*
