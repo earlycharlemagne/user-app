@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import {User} from "./user/user.model";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {HttpClient, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpParams, HttpHeaders} from "@angular/common/http";
 import {map} from "rxjs/operators";
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -29,11 +30,15 @@ export class AppComponent {
   }
 
   private getUser(firstname: string, surname: string) {
+    this.error = '';
     this.isRetrievingUser = true;
 
     this.http.get<User>(
       'http://localhost:8080/api/v1/users',
       {
+        headers: new HttpHeaders({
+          'Authorization': `Basic ${environment.authenticationKey}`
+        }),
         params: new HttpParams().set('firstname', firstname)
                                 .set('surname', surname)
       })
