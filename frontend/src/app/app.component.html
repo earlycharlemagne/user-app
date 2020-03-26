@@ -14,28 +14,38 @@
   <div class="container">
     <div class="row mb-5">
       <div class="col-12">
-        <form class="form-row">
+        <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="form-row search-form">
           <div class="col">
-            <input type="text" name="firstname" placeholder="First name" class="form-control"/>
+            <input type="text" formControlName="firstname" placeholder="First name*" class="form-control"/>
+            <span class="help-block"
+                  *ngIf="!searchForm.get('firstname').valid && searchForm.get('firstname').touched">First name is required</span>
           </div>
           <div class="col">
-            <input type="text" name="surname" placeholder="First name" class="form-control"/>
+            <input type="text" formControlName="surname" placeholder="Surname*" class="form-control"/>
+            <span class="help-block"
+                  *ngIf="!searchForm.get('surname').valid && searchForm.get('surname').touched">Surname is required</span>
           </div>
           <div class="col">
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!searchForm.get('firstname').valid || !searchForm.get('surname').valid">Search</button>
           </div>
         </form>
       </div>
     </div>
     <div class="row">
-      <div *ngIf="user != null" class="col-md-6 user-details">
-        <img [src]="user.imageUrl" class="img-fluid mb-2" />
-        <ul class="list-group">
-          <li class="list-group-item">First name: {{user.firstname}}</li>
-          <li class="list-group-item">Surname: {{user.surname}}</li>
-          <li class="list-group-item">Date of birth: {{user.dateOfBirth | date: "mediumDate"}}</li>
-          <li class="list-group-item">Gender: {{user.gender}}</li>
-        </ul>
+      <p *ngIf="isRetrievingUser && !error; else notLoading" class="h3 pt-3 pd-3">Loading...</p>
+      <ng-template #notLoading>
+        <div *ngIf="user" class="col-md-6 user-details">
+          <img [src]="user.imageUrl" class="img-fluid mb-2" />
+          <ul class="list-group">
+            <li class="list-group-item">First name: {{user.firstname}}</li>
+            <li class="list-group-item">Surname: {{user.surname}}</li>
+            <li class="list-group-item">Date of birth: {{user.dateOfBirth | date: "mediumDate"}}</li>
+            <li class="list-group-item">Gender: {{user.gender}}</li>
+          </ul>
+        </div>
+      </ng-template>
+      <div class="alert alert-danger" *ngIf="error">
+        <p>{{ error }}</p>
       </div>
     </div>
   </div>

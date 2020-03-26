@@ -1,0 +1,9 @@
+.search-form {
+  input.ng-invalid.ng-touched {
+    border: 1px solid #ff0000;
+  }
+  .help-block {
+    color: #ff0000;
+    font-size: 12px;
+  }
+}
