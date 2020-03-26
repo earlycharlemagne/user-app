@@ -1,0 +1,17 @@
+{
+  "gender": "female",
+  "name": {
+    "title": "Ms",
+    "first": "Suzanna",
+    "last": "Dixon"
+  },
+  "dob": {
+    "date": "1975-08-19T22:35:14.462Z",
+    "age": 45
+  },
+  "picture": {
+    "large": "https://randomuser.me/api/portraits/women/54.jpg",
+    "medium": "https://randomuser.me/api/portraits/med/women/54.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/54.jpg"
+  }
+}

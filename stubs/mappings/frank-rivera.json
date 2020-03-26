@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/user",
+    "queryParameters" : {
+      "firstname" : {
+        "equalTo" : "frank"
+      },
+      "lastname" : {
+        "equalTo" : "rivera"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "frank-rivera.json",
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}

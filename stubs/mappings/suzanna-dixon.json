@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/user",
+    "queryParameters" : {
+      "firstname" : {
+        "equalTo" : "suzanna"
+      },
+      "lastname" : {
+        "equalTo" : "dixon"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "suzanna-dixon.json",
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}

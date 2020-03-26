@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/user",
+    "queryParameters" : {
+      "firstname" : {
+        "equalTo" : "maddison"
+      },
+      "lastname" : {
+        "equalTo" : "rodriguez"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "maddison-rodriguez.json",
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}

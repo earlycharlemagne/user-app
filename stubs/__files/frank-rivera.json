@@ -1,0 +1,17 @@
+{
+  "gender": "male",
+  "name": {
+    "title": "Mr",
+    "first": "Frank",
+    "last": "Rivera"
+  },
+  "dob": {
+    "date": "1990-12-29T18:34:44.840Z",
+    "age": 30
+  },
+  "picture": {
+    "large": "https://randomuser.me/api/portraits/men/98.jpg",
+    "medium": "https://randomuser.me/api/portraits/med/men/98.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/98.jpg"
+  }
+}

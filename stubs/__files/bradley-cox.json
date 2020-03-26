@@ -1,0 +1,21 @@
+{
+  "gender": "male",
+  "name": {
+    "title": "Mr",
+    "first": "Fred",
+    "last": "Wheeler"
+  },
+  "dob": {
+    "date": "1997-01-17T13:38:03.819Z",
+    "age": 23
+  },
+  "id": {
+    "name": "NINO",
+    "value": "MJ 85 67 39 E"
+  },
+  "picture": {
+    "large": "https://randomuser.me/api/portraits/men/35.jpg",
+    "medium": "https://randomuser.me/api/portraits/med/men/35.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/35.jpg"
+  }
+}

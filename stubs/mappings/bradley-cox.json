@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/user",
+    "queryParameters" : {
+      "firstname" : {
+        "equalTo" : "bradley"
+      },
+      "lastname" : {
+        "equalTo" : "cox"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "bradley-cox.json",
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}
