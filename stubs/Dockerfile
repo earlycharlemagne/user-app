@@ -2,6 +2,6 @@ FROM rodolpheche/wiremock
 
 WORKDIR /home/wiremock
 
-COPY . .
+COPY . ./
 
 EXPOSE 5000
