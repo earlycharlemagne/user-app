@@ -28,13 +28,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 user-details">
-        <img src="/" class="img-fluid mb-2" />
+      <div *ngIf="user != null" class="col-md-6 user-details">
+        <img [src]="user.imageUrl" class="img-fluid mb-2" />
         <ul class="list-group">
-          <li class="list-group-item">First name: </li>
-          <li class="list-group-item">Surname: </li>
-          <li class="list-group-item">Date of birth: </li>
-          <li class="list-group-item">Gender: </li>
+          <li class="list-group-item">First name: {{user.firstname}}</li>
+          <li class="list-group-item">Surname: {{user.surname}}</li>
+          <li class="list-group-item">Date of birth: {{user.dateOfBirth | date: "mediumDate"}}</li>
+          <li class="list-group-item">Gender: {{user.gender}}</li>
         </ul>
       </div>
     </div>
