@@ -6,6 +6,7 @@ Build Api component
 ```
 # path: user-app
 cd api
+
 # path: user-app/api
 ./mvnw package
 ```
